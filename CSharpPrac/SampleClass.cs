@@ -5,7 +5,14 @@ namespace CSharpPrac
 	{
 		public SampleClass()
 		{
+			//コンストラクタ
 		}
+
+		public static void WriteToConsole(string targetString)
+        {
+			// 中身がプッシュできてないのだけど・・・
+			Console.WriteLine(targetString);
+        }
 	}
 }
 
