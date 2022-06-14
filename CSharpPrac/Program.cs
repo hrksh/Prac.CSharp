@@ -1,14 +1,20 @@
-﻿
+﻿using System.Collections.Generic;
+using System.Linq;
+
 namespace CSharpPrac
 {
     public class Practice
     {
         public static void Main(string[] args)
         {
-            // git 環境の練習のためのコメント・・・
-            // vs for mac よくわからん
-            string hw = "Hello World...";
-            SampleClass.WriteToConsole(hw);
+            List<string> strList = new List<string>();
+
+            for (int i = 0; i < 10; i++)
+            {
+                strList.Add($"item_{i}");
+            }
+
+            strList.ForEach(x => Console.WriteLine(x));
         }
     }
 }
