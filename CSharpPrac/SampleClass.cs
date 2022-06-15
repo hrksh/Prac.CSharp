@@ -3,12 +3,16 @@ namespace CSharpPrac
 {
 	public class SampleClass
 	{
-		public SampleClass()
+		private SampleClass()
 		{
-			//コンストラクタ
+			//特に今は何もしない・・・
 		}
 
-		public static void WriteToConsole(string targetString)
+		private static SampleClass sc = new SampleClass();
+
+		public static SampleClass Inst { get { return sc; } }
+
+		public void WriteToConsole(string targetString)
 		{
 			Console.WriteLine(targetString);
 		}
