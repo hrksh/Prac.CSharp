@@ -14,7 +14,7 @@ namespace CSharpPrac
                 strList.Add($"item_{i}");
             }
 
-            strList.ForEach(x => Console.WriteLine(x));
+            strList.ForEach(x => SampleClass.WriteToConsole(x));
         }
     }
 }
