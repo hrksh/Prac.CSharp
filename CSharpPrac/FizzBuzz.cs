@@ -25,6 +25,7 @@ namespace CSharpPrac
 		public void ShowFizzBuzz()
         {
             string strNum;
+
 			list.ForEach(x =>
             {
                 switch (x)
