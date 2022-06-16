@@ -7,13 +7,9 @@ namespace CSharpPrac
     {
         public static void Main(string[] args)
         {
-            List<string> strList = new List<string>();
-
-            for (int i = 0; i < 10; i++)
-            {
-                strList.Add($"item_{i}");
-            }
-            strList.ForEach(x => SampleClass.Inst.WriteToConsole(x));
+            FizzBuzz fb = new FizzBuzz();
+            //fb.ShowNumbers();
+            fb.ShowFizzBuzz();
         }
     }
 }
