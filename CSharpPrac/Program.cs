@@ -7,8 +7,7 @@ namespace CSharpPrac
     {
         public static void Main(string[] args)
         {
-            FizzBuzz fb = new FizzBuzz();
-            //fb.ShowNumbers();
+            FizzBuzz fb = new FizzBuzz();           
             fb.ShowFizzBuzz();
         }
     }

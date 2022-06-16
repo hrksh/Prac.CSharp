@@ -17,11 +17,6 @@ namespace CSharpPrac
             }
 		}
 
-		public void ShowNumbers()
-        {
-			list.ForEach(x => Console.WriteLine(x));
-        }
-
 		public void ShowFizzBuzz()
         {
             string strNum;
