@@ -7,8 +7,19 @@ namespace CSharpPrac
     {
         public static void Main(string[] args)
         {
-            FizzBuzz fb = new FizzBuzz();           
-            fb.ShowFizzBuzz();
+            try
+            {
+                FizzBuzz fb = new FizzBuzz();
+                fb.ShowFizzBuzz();
+            }
+            catch (Exception ex)
+            {
+                //明日はエラー処理何か考える
+            }
+            finally
+            {
+
+            }
         }
     }
 }
