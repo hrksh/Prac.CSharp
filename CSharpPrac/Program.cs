@@ -15,10 +15,11 @@ namespace CSharpPrac
             catch (Exception ex)
             {
                 //明日はエラー処理何か考える
+                //と思ったけど忙しくてできなかった。
             }
             finally
             {
-
+                Console.WriteLine("Program end...");
             }
         }
     }
