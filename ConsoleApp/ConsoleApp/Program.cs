@@ -1,7 +1,6 @@
 ﻿
-// コンソールで 3目並べを作ってみる
-// 考え中
-// 一旦マップ表示だけする
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
 
 Map baseMap = new Map(3, 3);
 baseMap.Show();
@@ -9,8 +8,8 @@ baseMap.Show();
 class Map()
 {
     private int _x = 0;
-    public int X => this._x;
     private int _y = 0;
+    public int X => this._x;
     public int Y => this._y;
     
     private Dot[,] DotMap = null;
@@ -20,30 +19,38 @@ class Map()
         this._y = y;
         this.DotMap = new Dot[this._x, this._y];
     }
-    
     public void Show()
     {
         for (int i = 0; i < this._x; i++)
         {
             for (int j = 0; j < this._y; j++)
             {
-                this.DotMap[i,j] = new Dot(DotStat.Batsu);
-                Console.Write(this.DotMap[i, j].Val);
+                this.DotMap[i,j] = new Dot(DotStat.None);
+                Console.Write(this.DotMap[i, j].GetVal());
             }
             Console.WriteLine();
         }
     }
 }
-enum DotStat { Maru, Batsu }
+enum DotStat { None, Maru, Batsu }
 class Dot()
 {
     DotStat _stat = DotStat.Batsu;
-
-    public Dot(DotStat stat) : this()
-    {
-        this.SetStat(stat);
-    }
-
+    public Dot(DotStat stat) : this() { this.SetStat(stat); }
     public void SetStat(DotStat stat) { _stat = stat; }
-    public string Val => (DotStat.Batsu == this._stat ? "❌" : "⭕️");
+    public string GetVal()
+    {
+        string result = string.Empty;
+        switch(this._stat) {
+            case DotStat.None  : result = "-" ; break;
+            case DotStat.Batsu : result = "❌"; break;
+            case DotStat.Maru  : result = "⭕️"; break;
+        }
+        return result;
+    }
+}
+
+abstract class Player
+{
+    // どうしようかな
 }
