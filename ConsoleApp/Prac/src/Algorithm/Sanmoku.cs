@@ -1,9 +1,4 @@
-﻿
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-
-Map baseMap = new Map(3, 3);
-baseMap.Show();
+namespace Prac.Algorithm;
 
 class Map()
 {
@@ -11,7 +6,7 @@ class Map()
     private int _y = 0;
     public int X => this._x;
     public int Y => this._y;
-    
+    // TODO:Warning 後で直す
     private Dot[,] DotMap = null;
     public Map(int x, int y) : this()
     {
