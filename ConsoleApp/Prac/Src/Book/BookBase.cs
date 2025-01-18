@@ -1,3 +1,5 @@
+using Prac.Src.Company;
+
 namespace Prac.Book;
 
 /// <summary>
@@ -8,7 +10,7 @@ public abstract class BookBase
     #region Abstract Members
     public abstract string Name { get; }
     public abstract string Author { get; }
-    public abstract string Publisher { get; }
+    public abstract Publisher Publisher { get; }
     public abstract BookType Type { get; }
     #endregion
     

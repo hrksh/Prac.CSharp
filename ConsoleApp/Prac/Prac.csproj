@@ -9,7 +9,7 @@
 
     <ItemGroup>
       <Folder Include="Resources\Img\" />
-      <Folder Include="src\Common\" />
+      <Folder Include="Src\Common\" />
       <Folder Include="src.Test\" />
     </ItemGroup>
 

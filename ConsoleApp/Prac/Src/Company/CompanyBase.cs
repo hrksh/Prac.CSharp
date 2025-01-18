@@ -2,6 +2,13 @@ namespace Prac.Src.Company;
 
 public class CompanyBase : ICompany
 {
+    private string _name;
+    public string Name { get; }
+
+    public CompanyBase(string name)
+    {
+        this._name = name;
+    }
     /*
      * 「会社」は英語で「company」や「corporation」などと言います.
      * 「company」はオーナーが経営している会社を指し、「corporation」は株の取引を行っている会社を指すイメージです。
